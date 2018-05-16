@@ -7,4 +7,5 @@ It shows a fake news site with the goal to capture the attention of the user to 
 # Check it out 
 
 githubpages:  https://ls-777.github.io/sunshine2020/
+
 online version:  https://sunshine2020.space/fr/
