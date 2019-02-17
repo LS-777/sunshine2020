@@ -39,9 +39,14 @@ h3, h4, h5, h6 {
 
 .main-title, .title-suite{
     font-family: 'naza', sans-serif;
-    font-size: 5rem;
-    letter-spacing: 1%;
+    font-size: calc(1em + 1vw)
 }
+@media screen and (max-width:451px){
+    .main-title, .title-suite{
+    font-size: calc(0.77em + 0.77vw)
+    }
+} 
+
 
 .main-title:first-letter{
     color:aqua !important;
@@ -98,21 +103,7 @@ section h3.section-subheading {
 .btn-primary:active, .btn-primary:focus {
     box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5)!important;
 }
-::-moz-selection {
-    background: #fed136;
-    text-shadow: none;
-}
-::selection {
-    background: #fed136;
-    text-shadow: none;
-}
-img::selection {
-    background: 0 0;
-}
-img::-moz-selection {
-    background: 0 0;
-}
-#mainNav {
+Nav {
     background-color: #212529;
 }
 #mainNav .navbar-toggler {
@@ -188,6 +179,7 @@ img::-moz-selection {
 header.masthead .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
+    max-width: 100%;
 }
 header.masthead .intro-text .intro-lead-in {
     font-size: 22px;
@@ -673,7 +665,7 @@ section#timer {
     background: url('../img/fusee1.jpg');
     background-size: cover;
     background-position: 0%, 55%;
-    height: 100vh;
+    height: 100%;
     opacity: 1;
 }
 
@@ -686,19 +678,17 @@ section#end {
     opacity: 1;
 }
 
-.end{
-}
+
 
 /* timer position */
 
 .timing{
-    min-height: 20%;
-    min-width: 60%;
-    margin-top: 30rem;
-    /*    background: black;*/
+    /* min-height: 20%; */
+    position: relative;
+    min-width: 80%;
+    margin-top: 40%;
     border-radius: 4%;
     opacity: 0.87;
-
 }
 
 .timing-text{
@@ -707,54 +697,36 @@ section#end {
 }
 
 .timer{
-    font-size:5vw;
+    font-size: calc(1.2em + 1vw);
     font-family: 'digital', sans-serif;
     font-weight: bold;
-    color:#00fd55; /* color chiffre */
-    /*    margin:0 1vw;*/
-    /*     padding:2.1vw 2.1vw;
-    */    display:inline-block;
-    width:10vw;
+    /* color chiffres */
+    color:#00fd55; 
+    display:inline-block;
+    width:15%;
+    min-width: 70px;
     border-radius:0px;
     text-align:center;
-    /*    color interieur des carré */
+    /*    color interieur des carrés */
     background:black;
     box-shadow:inset 0 -5px 0 rgba(0,0,0,0.5);
     border: 3px solid black;
 }
 
 .timer:after{
+    font-size: calc(0.5em + 0.5vw);
+
     color:red;
-    font-size:1.5vw;
     display:block;
     margin:10px 0 -1px;
     opacity:1;
+
 }
 .timer:nth-of-type(1):after{content:"Jours"}  .timer:nth-of-type(2):after{content:"Heures"}
 .timer:nth-of-type(3):after{content:"minutes"}   .timer:nth-of-type(4):after{content:"secondes"}
 
 
-div:before{
-    position:absolute;
-    margin-top:-7vw;
-    text-align:center;
-    width:100%;
-    left:0;font-size:3.25vw;
-    color:white;
-    FONT-WEIGHT:BOLD}
-
-div:after{
-    position:absolute;
-    text-align:center;
-    width:100%;
-    left:0;
-    font-size:1.4vw;
-    color:white;
-    bottom:-4vw;}
-
-
 /* progress bar */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
