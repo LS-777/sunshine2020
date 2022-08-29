@@ -1,6 +1,6 @@
 var s = document.getElementsByClassName('timer');
 var oneDay = 24 * 60 * 60 * 1000;
-var firstDate = new Date("26 April 2020 11:52");var secondDate = new Date();
+var firstDate = new Date("26 April 2023 11:52");var secondDate = new Date();
 var days = (firstDate.getTime() - secondDate.getTime()) / (oneDay);
 var hrs = (days - Math.floor(days)) * 24;
 var min = (hrs - Math.floor(hrs)) * 60;
